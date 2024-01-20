@@ -7,3 +7,6 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Company.find_or_create_by!(name: "SaaS Custom Domains", domain: "saascustomdomains.com")
+Company.find_or_create_by!(name: "Aellion", domain: "status.aellion.com")
