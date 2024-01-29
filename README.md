@@ -16,15 +16,15 @@ The setups steps expect following tools installed on the system.
 First, you need to clone the repo and install the needed gems:
 
 ```bash
-$ git clone https://github.com/saascustomdomains/ruby-on-rails-custom-domains-app
-$ cd ruby-on-rails-custom-domains-app
-$ bundle install
+git clone https://github.com/saascustomdomains/ruby-on-rails-custom-domains-app
+cd ruby-on-rails-custom-domains-app
+bundle install
 ```
 
 ## Database creation
 
 ```bash
-$ bin/rails db:create
+bin/rails db:create
 ```
 
 ## Database initialization
@@ -35,13 +35,13 @@ You can add your own company and the domain in the seed file or via Rails consol
 
 Then run:
 ```bash
-$ bin/rails db:seed
+bin/rails db:seed
 ```
 
 ## How to run
     
 ```bash
-$ bin/rails server
+bin/rails server
 ```
 
 Visit your app at http://localhost:3000. You should see the default status page which is the dummy status page of [SaasCustomDomains.com](https://saascustomdomains.com) showing a chart of random numbers.
