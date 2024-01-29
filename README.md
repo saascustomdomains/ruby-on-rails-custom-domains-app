@@ -48,3 +48,5 @@ $ bin/rails db:seed
 ```bash
 $ bin/rails server
 ```
+
+Visit your app at http://localhost:3000.
