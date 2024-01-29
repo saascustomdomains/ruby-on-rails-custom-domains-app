@@ -1,5 +1,8 @@
 class Company < ApplicationRecord
 
+  # Generates random status data for the company.
+  # This is just a dummy method to show how the status page
+  # would look like if we had real data.
   def fetch_status_data
     data = {}
     24.times.map do |i|

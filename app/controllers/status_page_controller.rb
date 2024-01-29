@@ -16,6 +16,7 @@ class StatusPageController < ApplicationController
     @company = Company.find_by(domain: request.headers['X-Served-For']) || Company.find_by(domain: 'status.saascustomdomains.com')
   end
 
+  # Fetch dummy status data for the company.
   def set_company_status_data
     @company_status_data = @company.try(:fetch_status_data)
     Rails.logger.info(@company_status_data)
