@@ -1,24 +1,45 @@
-# README
+# Custom Domains — Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a dummy application to demonstrate how to add custom domains to your Ruby on Rails application.
 
-Things you may want to cover:
+It's a status page application that shows the current status of your customers' applications and their services.
 
-* Ruby version
+## Prerequisites
 
-* System dependencies
+The setups steps expect following tools installed on the system.
 
-* Configuration
+- Ruby [3.2.0]
+- Rails [7.1.3]
 
-* Database creation
+## Setup
 
-* Database initialization
+First, you need to clone the repo and install the needed gems:
 
-* How to run the test suite
+```bash
+$ git clone https://github.com/saascustomdomains/ruby-on-rails-custom-domains-app
+$ cd ruby-on-rails-custom-domains-app
+$ bundle install
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Database creation
 
-* Deployment instructions
+```bash
+$ bin/rails db:create
+```
 
-* ...
+## Database initialization
+
+The seed file contains two companies for which we serve status pages — SaasCustomDomains.com and Intercom with their status page domains, [status.saascustomdomains.com](https://status.saascustomdomains.com) and [status.intercom.com](https://status.intercom.com).
+
+Feel free to add your own companies and domains to the seed file.
+
+Then run:
+```bash
+$ bin/rails db:seed
+```
+
+## How to run
+    
+```bash
+$ bin/rails server
+```
