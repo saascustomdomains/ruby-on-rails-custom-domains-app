@@ -1,6 +1,6 @@
 # Custom Domains — Ruby on Rails
 
-This is a dummy application to demonstrate how to add custom domains to your Ruby on Rails application.
+This is an example application to demonstrate how to add custom domains to your Ruby on Rails application using [SaasCustomDomains.com](https://saascustomdomains.com).
 
 It's a status page application that shows the current status of your customers' applications and their services.
 
@@ -29,9 +29,14 @@ $ bin/rails db:create
 
 ## Database initialization
 
-The seed file contains two companies for which we serve status pages — SaasCustomDomains.com and Intercom with their status page domains, [status.saascustomdomains.com](https://status.saascustomdomains.com) and [status.intercom.com](https://status.intercom.com).
+The seed file contains two companies for which we serve status pages — SaaS Custom Domains and Intercom with their status page domains, [status.saascustomdomains.com](https://status.saascustomdomains.com) and [status.intercom.com](https://status.intercom.com).
 
-Feel free to add your own companies and domains to the seed file.
+You can add your own domain in the seed file or via Rails console to test the functionality.
+
+### Steps
+1. Add your domain to the seed file, e.g. `status.yourdomain.com`, or via Rails console `Company.create(name: 'Your Company', domain: 'status.yourdomain.com')`
+2. Create your custom domain (`status.yourdomain.com`) in the [SaasCustomDomains.com](https://saascustomdomains.com) dashboard or via [API](https://docs.saascustomdomains.com/)
+3. Add a CNAME record for `status.yourdomain.com` pointing to `in.saascustomdomains.com`
 
 Then run:
 ```bash
