@@ -31,12 +31,7 @@ $ bin/rails db:create
 
 The seed file contains two companies for which we serve status pages — SaaS Custom Domains and Intercom with their status page domains, [status.saascustomdomains.com](https://status.saascustomdomains.com) and [status.intercom.com](https://status.intercom.com).
 
-You can add your own domain in the seed file or via Rails console to test the functionality.
-
-### Steps
-1. Add your domain to the seed file, e.g. `status.yourdomain.com`, or via Rails console `Company.create(name: 'Your Company', domain: 'status.yourdomain.com')`
-2. Create your custom domain (`status.yourdomain.com`) in the [SaasCustomDomains.com](https://saascustomdomains.com) dashboard or via [API](https://docs.saascustomdomains.com/)
-3. Add a CNAME record for `status.yourdomain.com` pointing to `in.saascustomdomains.com`
+You can add your own company and the domain in the seed file or via Rails console to test the functionality.
 
 Then run:
 ```bash
@@ -49,4 +44,17 @@ $ bin/rails db:seed
 $ bin/rails server
 ```
 
-Visit your app at http://localhost:3000.
+Visit your app at http://localhost:3000. You should see the default status page which is the dummy status page of [SaasCustomDomains.com](https://saascustomdomains.com) showing a chart of random numbers.
+
+## How to test in production
+
+You may want to add your own domain to test the functionality. Once you've deployed the app to your favourite hosting, you can do that by following the steps below.
+
+### Steps
+1. Add your company via Rails console: `Company.create(name: 'Your Company', domain: 'status.yourdomain.com')`
+2. Create your upstream in the [SaasCustomDomains.com](https://saascustomdomains.com) dashboard or via [API](https://docs.saascustomdomains.com/). 
+   1. This is the URL where you deployed this status page application, e.g. `test-statuspage.onrender.com` or `test-statuspage.herokuapp.com` etc.
+3. Create your custom domain (`status.yourdomain.com`) in the [SaasCustomDomains.com](https://saascustomdomains.com) dashboard or via [API](https://docs.saascustomdomains.com/)
+4. Add a CNAME record for `status.yourdomain.com` pointing to `in.saascustomdomains.com`
+
+That's it! Visit `status.yourdomain.com` and you should see the status page of your company.
