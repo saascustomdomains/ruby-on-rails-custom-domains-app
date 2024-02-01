@@ -4,6 +4,8 @@ This is an example application to demonstrate how to add custom domains to your 
 
 It's a status page application that shows the current status of your customers' applications and their services.
 
+The guide that comes with this repo can be found [here](https://saascustomdomains.com/blog/posts/best-guide-custom-domains-ruby-on-rails).
+
 ## Prerequisites
 
 The setups steps expect following tools installed on the system.
